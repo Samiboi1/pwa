@@ -1,7 +1,7 @@
 {
-    "name": "PWA Testing",
-    "short_name": "PWA",
-    "theme_color": "#f32121",
+    "name": "pwa testing 2",
+    "short_name": "pwa",
+    "theme_color": "#e3251f",
     "background_color": "#fffdf2",
     "display": "browser",
     "orientation": "portrait",
