@@ -1,1 +1,1 @@
-fetch('/home/samiboi/frontend/PWA testing/manifest.json')
+fetch('/manifest.json')
