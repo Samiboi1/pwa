@@ -29,5 +29,8 @@
     "onchange": "^7.1.0",
     "sass": "^1.93.2",
     "uglify-js": "^3.14.5"
+  },
+  "dependencies": {
+    "@dannymoerkerke/file-tree": "^0.0.5"
   }
 }

@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <link rel="manifest" href="manifest.json" />
   <script src="./node_modules/axe-core/axe.min.js"></script>
+  <script src="./node_modules/@dannymoerkerke/file-tree/src/file-tree.js" type="module"></script>
   <title></title>
 </head>
 
@@ -16,6 +17,9 @@
     <h1>
       Let's get this going, for once
     </h1>
+    <file-tree>
+      <button type="button" slot="browse-button">Open directory</button>
+    </file-tree>
   </main>
   <footer>
     <script src="./sw-registration.js"></script>
