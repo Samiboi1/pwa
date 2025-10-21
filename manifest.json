@@ -1,10 +1,13 @@
 {
-    "name": "pwa testing 2",
-    "short_name": "pwa",
-    "theme_color": "#e3251f",
+    "name": "PWA Testing",
+    "theme_color": "#e32620",
     "background_color": "#fff6f2",
-    "display": "browser",
-    "orientation": "portrait",
-    "scope": "/",
-    "start_url": "/"
+    "short_name": "PWA",
+    "icons": [
+        {
+            "src": "red.png",
+            "type": "file:///home/samiboi/Downloads/red.png",
+            "purpose": "any"
+        }
+    ]
 }
