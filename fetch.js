@@ -1,1 +1,1 @@
-fetch('/manifest.json')
+fetch('./manifest.json')
