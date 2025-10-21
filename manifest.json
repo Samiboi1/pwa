@@ -6,7 +6,7 @@
     "icons": [
         {
             "src": "red.png",
-            "type": "file:///home/samiboi/Downloads/red.png",
+            "type": "./red.png",
             "purpose": "any"
         }
     ]
