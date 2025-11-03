@@ -1,11 +1,12 @@
-if('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
     const registerServiceWorker = async () => {
+      console.log(navigator);
       const registration = await navigator.serviceWorker.register('/service-worker.js');
       const newServiceWorkerWaiting = registration.waiting && registration.active;
 
       // if there is already a new Service Worker waiting when the page is loaded, skip waiting to update immediately
-      if(newServiceWorkerWaiting) {
+      if (newServiceWorkerWaiting) {
         console.log('new sw waiting');
         window.swUpdate = true;
         await SWHelper.skipWaiting();
@@ -16,12 +17,12 @@ if('serviceWorker' in navigator) {
         const installingWorker = registration.installing;
 
         // installing Service Worker found
-        if(installingWorker) {
+        if (installingWorker) {
           console.log('installing sw found');
           installingWorker.addEventListener('statechange', async () => {
             // the new Service Worker is installed and waiting to be activated
             // the outdated caches can be updated and the Service Worker will be activated on the next navigation or reload
-            if(installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
+            if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
               console.log('new sw installed');
 
               window.swUpdate = true;
@@ -49,16 +50,16 @@ if('serviceWorker' in navigator) {
       },
 
       async skipWaiting() {
-        return (await SWHelper.getWaitingWorker())?.postMessage({type: 'SKIP_WAITING'});
+        return (await SWHelper.getWaitingWorker())?.postMessage({ type: 'SKIP_WAITING' });
       },
 
       async prepareCachesForUpdate() {
-        return (await SWHelper.getWaitingWorker())?.postMessage({type: 'PREPARE_CACHES_FOR_UPDATE'});
+        return (await SWHelper.getWaitingWorker())?.postMessage({ type: 'PREPARE_CACHES_FOR_UPDATE' });
       }
     };
 
     const updateServiceWorkerIfNeeded = async (e) => {
-      if(window.swUpdate) {
+      if (window.swUpdate) {
         // set swUpdate to false to avoid multiple calls to skipWaiting which can cause the service worker
         // to stay in the waiting state
         window.swUpdate = false;
@@ -66,7 +67,7 @@ if('serviceWorker' in navigator) {
       }
     };
 
-    const retryRequests = () => navigator.serviceWorker.controller.postMessage({type: 'retry-requests'});
+    const retryRequests = () => navigator.serviceWorker.controller.postMessage({ type: 'retry-requests' });
 
     // check if the Service Worker needs to be updated on page navigation or reload
     // beforeunload is reliably triggered on desktop, pagehide is more reliable on mobile and is the only event that is
