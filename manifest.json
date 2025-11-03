@@ -3,7 +3,7 @@
     "theme_color": "#e32620",
     "background_color": "#fff6f2",
     "short_name": "PWA",
-    "start_url": "https://samiboi1.github.io/pwa/index.html",
+    "start_url": "https://samiboi1.github.io/pwa",
     "display": "fullscreen",
     "icons": [
         {
