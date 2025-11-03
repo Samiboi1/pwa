@@ -1,8 +1,7 @@
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
     const registerServiceWorker = async () => {
-      console.log(navigator);
-      const registration = await navigator.serviceWorker.register('/service-worker.js');
+      const registration = await navigator.serviceWorker.register('./service-worker.js');
       const newServiceWorkerWaiting = registration.waiting && registration.active;
 
       // if there is already a new Service Worker waiting when the page is loaded, skip waiting to update immediately

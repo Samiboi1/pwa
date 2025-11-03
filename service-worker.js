@@ -298,7 +298,6 @@ const fetchHandler = async e => {
 // message handler for communication between the main thread and the Service Worker through postMessage
 const messageHandler = async ({ data }) => {
   const { type } = data;
-  console.log(`MESSAGE: ${data}`);
 
   switch (type) {
     case 'SKIP_WAITING':
