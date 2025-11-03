@@ -11,6 +11,7 @@ const staticFiles = [
   '/index.html',
   '/manifest.json',
   '/fetch.js',
+  '/style.css',
 ];
 
 // routes to cache
