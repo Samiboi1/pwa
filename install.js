@@ -1,3 +1,4 @@
+
 let deferredEvent;
 
 window.addEventListener('beforeinstallprompt', (e) => {
@@ -13,6 +14,4 @@ installButton.addEventListener('click', () => {
     if (deferredEvent) {
         deferredEvent.prompt();
     }
-
-
 });
