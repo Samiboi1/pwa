@@ -1,6 +1,5 @@
 
 let deferredEvent;
-function installButton() { }
 
 window.addEventListener('beforeinstallprompt', (e) => {
     // prevent the browser from displaying the default install dialog
