@@ -10,6 +10,11 @@
             "src": "red.png",
             "type": "./red.png",
             "sizes": "512x512"
+        },
+        {
+            "src": "red.png",
+            "type": "./red.png",
+            "sizes": "192x192"
         }
     ]
 }
