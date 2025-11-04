@@ -2,19 +2,24 @@
 let deferredEvent;
 let installButton;
 
-window.addEventListener('beforeinstallprompt', (e) => {
-    // prevent the browser from displaying the default install dialog
+// handle the beforeinstallprompt event 
+window.addEventListener('beforeinstallprompt', e => {
+    // prevent the install dialog from appearing too early
     e.preventDefault();
 
-    // Stash the event so it can be triggered later when the user clicks the button
-    deferredEvent = e;
+    // store the event for later use
+    window.deferredPrompt = e;
 });
 
 installButton = document.getElementById('installBtn')
 
+// event listener for the install button click
 installButton.addEventListener('click', () => {
-    // if the deferredEvent exists, call its prompt method to display the install dialog
-    if (deferredEvent) {
-        deferredEvent.prompt();
+    if (window.deferredPrompt) {
+        // call the prompt method on the deferredPrompt object to display the install dialog
+        window.deferredPrompt.prompt();
     }
-});
+    else {
+        // show a dialog with instructions for browsers that don't support beforeinstallprompt
+    }
+})
