@@ -10,6 +10,8 @@ window.addEventListener('beforeinstallprompt', (e) => {
     deferredEvent = e;
 });
 
+installButton = document.getElementById('installBtn')
+
 installButton.addEventListener('click', () => {
     // if the deferredEvent exists, call its prompt method to display the install dialog
     if (deferredEvent) {
