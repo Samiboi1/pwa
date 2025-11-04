@@ -13,4 +13,6 @@ installButton.addEventListener('click', () => {
     if (deferredEvent) {
         deferredEvent.prompt();
     }
+
+
 });
