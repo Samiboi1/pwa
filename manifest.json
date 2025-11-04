@@ -18,19 +18,5 @@
             "sizes": "512x512",
             "purpose": "maskable"
         }
-    ],
-    "screenshots": [
-        {
-            "src": "PWA Color Scheme.png",
-            "sizes": "400x822",
-            "type": "./PWA Color Scheme.png",
-            "form_factor": "narrow"
-        },
-        {
-            "src": "PWA Color Scheme.png",
-            "sizes": "1280x676",
-            "type": "./PWA Color Scheme.png",
-            "form_factor": "wide"
-        }
     ]
 }
