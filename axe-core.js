@@ -1,3 +1,5 @@
+let axe;
+
 axe
     .run()
     .then(results => {
