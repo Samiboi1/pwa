@@ -1,7 +1,23 @@
+#container {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     background-color: #fff6f2;
 }
 
 .title {
     color: #e3251f;
+    margin: auto;
+}
+
+.bull {
+    color: #240000;
+    margin: auto;
+}
+
+#installBtn {
+    color: #e3251f;
+    margin: auto;
 }
