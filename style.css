@@ -18,6 +18,7 @@ body {
 }
 
 #installBtn {
-    color: #e3251f;
+    background-color: #e3251f;
+    color: #fff6f2;
     margin: auto;
 }
